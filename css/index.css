@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    border-top: 2px solid lightgray;
+    margin-top: 20px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo > img {
+    margin-top: 10px;
+    width: 50px;
+}
+
+.navbar {
+    height: 20px;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.hamburger {
+    margin-left: auto;
+    margin-right: 10px;
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+.product {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.product p {
+    text-align: start;
+    padding: 5px;
+}
+
+.product i {
+    margin-top: 10px;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.social_icon {
+    text-align: center;
+    flex: 33%;
+}
+
+/* for a width range of 521 to 900px */
+@media (min-width:521px) and (max-width:900px) {
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        flex: 40%;
+    }
+
+    .companyName {
+        text-align: start;
+        flex: 60%;
+    }
+}
+
+/* for widths bigger than 901px */
+@media (min-width:901px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar {
+        display: block;
+        height: 45px;
+    }
+
+    .product {
+        height: 280px;
+        margin-top: 10px;
+        width: 30%;
+        justify-content: space-around;
+    }
+
+    .logo {
+        flex: 36%;
+    }
+
+    .companyName {
+        flex: 33%;
+        text-align: start;
+    }
+
+    .headerSpacer {
+        flex: 33%;
+    }
+
+    .menu {
+        color: white;
+        display: flex;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu li {
+        text-align: center;
+        width: 100px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
